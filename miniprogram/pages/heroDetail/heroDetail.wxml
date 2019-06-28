@@ -1,0 +1,21 @@
+<view class="header">
+  <view class="header_container">
+    <image class="header_container__bgImg" src="{{hero.ename ? 'cloud://xiami-opycn.7869-xiami-opycn/images/heroInfo/bigskin/' + hero.ename + '.jpg' : ''}}" mode="aspectFill" />
+    <view class="header_container__content">
+      <text class="hero_title">{{hero.title}}</text>
+      <text class="hero_name">{{hero.cname}}</text>
+      <text class="hero_type"></text>
+      <view class="hero_ability">
+        <view class="hero_ability__detail">
+          <view ><text ></text></view>
+          <view ><text ></text></view>
+          <view ><text ></text></view>
+          <view ><text ></text></view>
+        </view>
+        <view class="hero_ability__skins">
+          <text class="ion-ios-arrow-forward"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

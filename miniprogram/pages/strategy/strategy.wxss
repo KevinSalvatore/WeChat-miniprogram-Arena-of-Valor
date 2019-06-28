@@ -1,0 +1,85 @@
+/* pages/strategy/strategy.wxss */
+.wrapper {
+  border: 1px solid #64edac;
+  border-radius: 5rpx;
+  position: relative;
+  padding: 25rpx;
+  margin: 50rpx 0;
+}
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  height: 10rpx;
+  width: 90%;
+  border-top: 1px solid #64edac;
+  border-left: 1px solid #64edac;
+  border-right: 1px solid #64edac;
+  border-top-right-radius: 10rpx;
+  border-top-left-radius: 10rpx;
+}
+.wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  height: 10rpx;
+  width: 90%;
+  border-bottom: 1px solid #64edac;
+  border-left: 1px solid #64edac;
+  border-right: 1px solid #64edac;
+  border-bottom-right-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+.heroItem-extra-style {
+  padding-right: 25rpx;
+}
+.item {
+  margin: 25rpx 0;
+}
+.title {
+  font-weight: bold;
+}
+.forMore {
+  font-weight: lighter;
+  font-size: 0.75em;
+  color: #111111;
+}
+.rankListDes {
+  font-size: 0.75em;
+  font-weight: lighter;
+}
+.avatar-item {
+  margin: 0 5rpx;
+  position: relative;
+}
+.crown {
+  width: 40%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -110%);
+}
+.top3Hero {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 10rpx;
+}
+.rankList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25rpx;
+  background-color: #eeeeee;
+  border-radius: 20rpx;
+}
+.avatarGroup {
+  margin-right: 10rpx;
+}
+.rankListTitle {
+  line-height: 1;
+  padding: 15rpx 0;
+}

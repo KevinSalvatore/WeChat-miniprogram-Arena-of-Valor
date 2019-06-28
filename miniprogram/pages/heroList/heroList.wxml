@@ -1,0 +1,71 @@
+<view class="searchWrapper">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="攻略" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">攻略</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">
+      取消
+    </view>
+  </view>
+  <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view style="display: {{!inputShowed ? 'block' : 'none'}}">
+  <view class="searchArea">
+    <view wx:for="{{labels.rows}}" wx:key="index" class="weui-flex">
+      <view wx:for="{{item}}" wx:for-item="searchItem" wx:key="searchKey" class="{{searchItem.type === 'normal' ? 'weui-flex__item' : 'specialItem'}}">
+        <view class="searchItem {{labels.selected === searchItem.content ? 'selected' : ''}}" bind:tap="select" data-content="{{searchItem.content}}">
+          {{searchItem.content}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="container" wx:if="{{labels.selected === '♔英雄图谱'}}">
+    <view class="heroWrapper van-hairline--bottom">
+      <view class="hero-group">
+        <text class="hero-group__title">最新</text>
+        <view class="hero-group__item hero-group__container">
+          <heroItem wx:for="{{newHeroes}}" wx:key="index" src="../../resource/heroImages/{{item.ename}}.jpg" data-ename="{{item.ename}}" hero-ename="{{item.ename}}" hero-cname="{{item.cname}}" bind:tap="toHeroDetailPage" />
+        </view>
+      </view>
+    </view>
+    <view class="heroWrapper">
+      <view class="hero-group" wx:for="{{heroType}}" wx:key="index">
+        <text class="hero-group__title">{{item.value}}</text>
+        <view class="hero-group__item hero-group__container">
+          <heroItem wx:for="{{heroList}}" wx:key="heroKey" wx:for-item="heroItem" wx:if="{{heroItem.hero_type === item.key}}" src="../../resource/heroImages/{{heroItem.ename}}.jpg" data-ename="{{heroItem.ename}}" hero-ename="{{heroItem.ename}}" hero-cname="{{heroItem.cname}}" bind:tap="toHeroDetailPage"></heroItem>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+/* pages/heroList/heroList.wxss */
+
+.searchItem {
+  text-align: center;
+  margin: 10rpx;
+  padding: 10rpx;
+  line-height: 1;
+  background-color: #fff;
+  font-weight: lighter;
+  border-radius: 15rpx;
+}
+
+.specialItem {
+  width: 33.33333333%;
+}
+
+.searchArea {
+  background-color: #efeff4;
+  padding: 10rpx 0;
+}
+
+.selected {
+  background-color: #64edac;
+  color: #fff;
+}
+
+.hero-group__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+heroItem {
+  width: 20%;
+  margin: 15rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-group__title {
+  padding: 15rpx;
+  font-weight: bold;
+}
+
+.hero-group {
+  padding: 25rpx 0;
+}

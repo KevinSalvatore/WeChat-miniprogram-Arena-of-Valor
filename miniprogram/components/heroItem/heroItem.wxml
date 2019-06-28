@@ -1,0 +1,6 @@
+<view class="heroItem-wrapper root-style">
+  <image class="heroItem-avatar" src="{{src}}">
+    <slot class="heroItem-tag"></slot>
+  </image>
+  <view class="heroItem-name">{{heroCname}}</view>
+</view>

@@ -1,0 +1,55 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/strategy/strategy",
+    "pages/index/index",
+    "pages/heroList/heroList",
+    "pages/home/home",
+    "pages/choiceness/choiceness",
+    "pages/me/me",
+    "pages/heroDetail/heroDetail"
+  ],
+  "window": {
+    "backgroundColor": "#FAFAFA",
+    "backgroundColorTop": "#FAFAFA",
+    "backgroundColorBottom": "#FAFAFA",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#64EDAC",
+    "navigationBarTitleText": "王者荣耀助手",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#4B5152",
+    "selectedColor": "#000000",
+    "backgroundColor": "#FEFEFE",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页",
+        "iconPath": "./resource/tabBarIcon/notActived/主页.png",
+        "selectedIconPath": "resource/tabBarIcon/activied/主页.png"
+      },
+      {
+        "pagePath": "pages/choiceness/choiceness",
+        "text": "精选",
+        "iconPath": "resource/tabBarIcon/notActived/精选.png",
+        "selectedIconPath": "resource/tabBarIcon/activied/精选.png"
+      },
+      {
+        "pagePath": "pages/strategy/strategy",
+        "text": "攻略",
+        "iconPath": "resource/tabBarIcon/notActived/攻略.png",
+        "selectedIconPath": "resource/tabBarIcon/activied/攻略.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "resource/tabBarIcon/notActived/我.png",
+        "selectedIconPath": "resource/tabBarIcon/activied/我.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

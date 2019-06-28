@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="wrapper">
+    <text class="item title">英雄图鉴</text>
+    <view class="item newHeroContainer verticalAlignMiddle">
+      <heroItem wx:for="{{newHeroes}}" wx:key="index" src="../../resource/heroImages/{{item.ename}}.jpg" data-ename="{{item.ename}}" hero-ename="{{item.ename}}" hero-cname="{{item.cname}}" root-style="heroItem-extra-style" bind:tap="toHeroDetailPage" />
+    </view>
+    <view class="item rankList">
+      <view class="rankList__left">
+        <view class="rankListTitle">英雄上分排行榜</view>
+        <view class="rankListDes">{{topInfo.infomation}}</view>
+      </view>
+      <view class="rankList__right verticalAlignMiddle">
+        <view class="avatarGroup verticalAlignMiddle">
+          <view class="avatar-item" wx:for="{{topInfo.topHeroes}}" wx:key="index">
+            <image class="crown" mode="widthFix" src="/resource/crown/{{index + 1}}.png" />
+            <image class="top3Hero" src="/resource/heroImages/{{item}}.jpg"></image>
+          </view>
+        </view>
+        <view>
+          <text class="icon ion-ios-arrow-forward" />
+        </view>
+      </view>
+    </view>
+    <view class="forMore" bind:tap="toHeroListPage">
+      全部英雄
+      <text class="icon ion-ios-arrow-forward" />
+    </view>
+  </view>
+  <view class="wrapper"></view>
+</view>

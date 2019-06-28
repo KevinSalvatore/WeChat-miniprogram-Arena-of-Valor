@@ -1,0 +1,25 @@
+.heroItem-wrapper {
+  font-size: 1rem;
+  width: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroItem-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+  border-radius: 15rpx;
+}
+
+.heroItem-name {
+  text-align: center;
+  font-size: 0.75em;
+  padding: 10rpx 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: inherit;
+  line-height: 1;
+}
